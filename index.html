@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maged Alaa Ahmed | Junior Web Developer</title>
+  <title>Maged Alaa Ahmed | Junior Software Developer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
   <header>
     <p class="status"><span class="dot"></span> Open to junior roles</p>
     <h1>Maged Alaa Ahmed</h1>
-    <p class="tagline">Junior Full-Stack Web Developer based in Cairo, Egypt</p>
+    <p class="tagline">Junior Software Developer based in Cairo, Egypt</p>
     <div class="buttons">
       <a class="btn primary" href="https://github.com/magedalkishki">View my GitHub</a>
       <a class="btn" href="mailto:maged.alkishki@gmail.com">Email me</a>
@@ -29,9 +29,13 @@
     <section id="about" class="card">
       <h2>About me</h2>
       <p>
-        Computer Science graduate from Misr International University.
-        I competed professionally in Valorant, and now I am focused on
-        building web applications with JavaScript, React and Node.js.
+        Computer Science graduate from Misr International University. I
+        competed professionally in Valorant before moving fully into
+        software. Most of what I build is backend-focused &mdash; Java and
+        Spring Boot on the server, plain JavaScript on the frontend &mdash;
+        and I gravitate toward projects with a real rule or constraint to
+        model correctly, like VCT's actual roster-eligibility rules or a
+        library's due-date logic, rather than generic CRUD demos.
       </p>
     </section>
 
@@ -39,24 +43,34 @@
       <h2>Projects</h2>
       <div class="projects-grid">
         <article class="project">
-          <h3>Job Application Tracker</h3>
-          <p>Full-stack app to track my own job applications. React, Node.js, MySQL.</p>
-          <span class="tag">Planned</span>
+          <h3>Esports Team Manager</h3>
+          <p>A console app for managing Valorant esports rosters, with compliance checked against the real VCT Global Policies (2027) rulebook &mdash; roster size limits and the Home-Region residency ratio every VCT team actually has to meet, not invented rules.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">Maven</span><span class="tag">JUnit</span></div>
+          <a class="project-link" href="https://github.com/magedalkishki/esports-team-manager">View on GitHub &rarr;</a>
         </article>
         <article class="project">
-          <h3>Valorant Agent Browser</h3>
-          <p>Browse agents and maps from a public API. React.</p>
-          <span class="tag">Planned</span>
+          <h3>Esports Roster Web</h3>
+          <p>The web companion to Esports Team Manager &mdash; the same real roster-compliance rules, but as a site anyone can open in a browser, with a shareable public page and directory per team.</p>
+          <div class="tags"><span class="tag">Node.js</span><span class="tag">Vanilla JS</span></div>
+          <a class="project-link" href="https://github.com/magedalkishki/esports-roster-web">View on GitHub &rarr;</a>
         </article>
         <article class="project">
-          <h3>PC Build Checker</h3>
-          <p>Pick parts and check if they are compatible. JavaScript, React.</p>
-          <span class="tag">Planned</span>
+          <h3>Library Management</h3>
+          <p>A console app for managing a library's books &mdash; add, borrow, return, edit &mdash; with live search against the Open Library API to pull in a real book's title, author and publish year. Tracks due dates and flags anything overdue.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">Maven</span><span class="tag">JUnit</span></div>
+          <a class="project-link" href="https://github.com/magedalkishki/library-management">View on GitHub &rarr;</a>
         </article>
         <article class="project">
-          <h3>This Portfolio</h3>
-          <p>The site you are looking at. HTML, CSS, JavaScript.</p>
-          <span class="tag">In progress</span>
+          <h3>OptLink</h3>
+          <p>A demo of an opt-in-first B2B data marketplace: consumers explicitly consent to be listed, companies subscribe to reveal contact details, and every reveal writes to a permanent access log. Built with invented demo data only &mdash; real personal data would require licensing under Egypt's data protection law, which is a real business step, not something to route around for a portfolio piece.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">JPA</span></div>
+          <a class="project-link" href="https://github.com/magedalkishki/optlink">View on GitHub &rarr;</a>
+        </article>
+        <article class="project">
+          <h3>ServiceHub</h3>
+          <p>A small subscription platform that gates access to hosted tools behind login plus an active subscription &mdash; the first step toward hosting several of my tools in one place. Ships with a QR code generator as its first gated service.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">JPA</span></div>
+          <a class="project-link" href="https://github.com/magedalkishki/serviceshub">View on GitHub &rarr;</a>
         </article>
       </div>
     </section>

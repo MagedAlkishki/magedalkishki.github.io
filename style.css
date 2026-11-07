@@ -228,7 +228,7 @@ a {
 /* ---------- Project cards ---------- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
 }
 
@@ -257,6 +257,13 @@ a {
   font-size: 0.95rem;
 }
 
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
 .tag {
   display: inline-block;
   font-size: 0.75rem;
@@ -264,6 +271,18 @@ a {
   border-radius: 999px;
   background: rgba(255, 70, 85, 0.15);
   color: var(--accent);
+}
+
+.project-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-2);
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
 }
 
 /* ---------- Footer and small screens ---------- */
