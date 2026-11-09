@@ -285,6 +285,24 @@ a {
   text-decoration: underline;
 }
 
+/* ---------- Skills section ---------- */
+.skills-group {
+  margin-bottom: 16px;
+}
+
+.skills-group:last-child {
+  margin-bottom: 0;
+}
+
+.skills-group h4 {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
 /* ---------- Footer and small screens ---------- */
 footer {
   text-align: center;
