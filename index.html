@@ -9,28 +9,66 @@
 <body>
   <div class="progress-bar" id="progress-bar"></div>
   <div class="cursor-glow" id="cursor-glow"></div>
+  <div class="grid-overlay"></div>
   <div class="bg-blobs">
     <span class="blob blob-1"></span>
     <span class="blob blob-2"></span>
     <span class="blob blob-3"></span>
+    <span class="blob blob-4"></span>
   </div>
 
-  <header>
+  <nav class="site-nav" id="site-nav">
+    <a href="#top" class="nav-brand">MA</a>
+    <div class="nav-links">
+      <a href="#about" data-nav="about">About</a>
+      <a href="#skills" data-nav="skills">Skills</a>
+      <a href="#projects" data-nav="projects">Projects</a>
+      <a href="#approach" data-nav="approach">Approach</a>
+      <a href="#certifications" data-nav="certifications">Certs</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </div>
+  </nav>
+
+  <header id="top">
     <p class="status"><span class="dot"></span> Open to junior roles</p>
-    <h1>Maged Alaa Ahmed</h1>
+    <h1 class="gradient-text">Maged Alaa Ahmed</h1>
     <p class="tagline">Junior Software Developer based in Cairo, Egypt</p>
+
+    <div class="stat-row">
+      <div class="stat">
+        <span class="stat-num" data-count="12">0</span>
+        <span class="stat-label">Projects</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-count="9">0</span>
+        <span class="stat-label">Languages</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-count="100" data-suffix="%">0%</span>
+        <span class="stat-label">Shipped with real tests</span>
+      </div>
+    </div>
+
     <div class="buttons">
       <a class="btn primary" href="https://github.com/magedalkishki">View my GitHub</a>
       <a class="btn" href="https://www.linkedin.com/in/maged-alaa-4647b0251">LinkedIn</a>
       <a class="btn" href="mailto:maged.alkishki@gmail.com" id="email-btn">Email me</a>
     </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to content">
+      <span>Scroll</span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
   </header>
 
   <div class="toast" id="toast"></div>
 
   <main>
-    <section id="about" class="card">
-      <h2>About me</h2>
+    <section id="about" class="card reveal">
+      <div class="section-head">
+        <span class="kicker">01 &mdash; Who I am</span>
+        <h2>About me</h2>
+      </div>
       <p>
         Computer Science graduate from Misr International University. I
         competed professionally in Valorant before moving fully into
@@ -47,8 +85,11 @@
       </p>
     </section>
 
-    <section id="skills" class="card">
-      <h2>Skills</h2>
+    <section id="skills" class="card reveal">
+      <div class="section-head">
+        <span class="kicker">02 &mdash; What I know</span>
+        <h2>Skills</h2>
+      </div>
       <div class="skills-group">
         <h4>Core</h4>
         <div class="tags"><span class="tag">Java</span><span class="tag">JavaScript</span></div>
@@ -63,76 +104,85 @@
       </div>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <article class="project">
+    <section id="projects" class="reveal">
+      <div class="section-head">
+        <span class="kicker">03 &mdash; What I've built</span>
+        <h2>Projects</h2>
+      </div>
+
+      <div class="filter-row" id="filter-row">
+        <button class="filter-pill active" data-filter="all">All</button>
+      </div>
+      <p class="filter-status" id="filter-status"></p>
+
+      <div class="projects-grid" id="projects-grid">
+        <article class="project reveal" data-lang="Java">
           <h3>Esports Team Manager</h3>
           <p>A console app for managing Valorant esports rosters, with compliance checked against the real VCT Global Policies (2027) rulebook &mdash; roster size limits and the Home-Region residency ratio every VCT team actually has to meet, not invented rules.</p>
           <div class="tags"><span class="tag">Java</span><span class="tag">Maven</span><span class="tag">JUnit</span></div>
           <a class="project-link" href="https://github.com/magedalkishki/esports-team-manager">View on GitHub &rarr;</a>
         </article>
-        <article class="project">
+        <article class="project reveal" data-lang="JavaScript">
           <h3>Esports Roster Web</h3>
           <p>The web companion to Esports Team Manager &mdash; the same real roster-compliance rules, but as a site anyone can open in a browser, with a shareable public page and directory per team.</p>
           <div class="tags"><span class="tag">Node.js</span><span class="tag">Vanilla JS</span></div>
           <a class="project-link" href="https://github.com/magedalkishki/esports-roster-web">View on GitHub &rarr;</a>
         </article>
-        <article class="project">
+        <article class="project reveal" data-lang="Java">
           <h3>Library Management</h3>
           <p>A console app for managing a library's books &mdash; add, borrow, return, edit &mdash; with live search against the Open Library API to pull in a real book's title, author and publish year. Tracks due dates and flags anything overdue.</p>
           <div class="tags"><span class="tag">Java</span><span class="tag">Maven</span><span class="tag">JUnit</span></div>
           <a class="project-link" href="https://github.com/magedalkishki/library-management">View on GitHub &rarr;</a>
         </article>
-        <article class="project">
+        <article class="project reveal" data-lang="Java">
           <h3>OptLink</h3>
           <p>A demo of an opt-in-first B2B data marketplace: consumers explicitly consent to be listed, companies subscribe to reveal contact details, and every reveal writes to a permanent access log. Built with invented demo data only &mdash; real personal data would require licensing under Egypt's data protection law, which is a real business step, not something to route around for a portfolio piece.</p>
           <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">JPA</span></div>
           <a class="project-link" href="https://github.com/magedalkishki/optlink">View on GitHub &rarr;</a>
         </article>
-        <article class="project">
+        <article class="project reveal" data-lang="Java">
           <h3>ServiceHub</h3>
           <p>A small subscription platform that gates access to hosted tools behind login plus an active subscription &mdash; the first step toward hosting several of my tools in one place. Ships with a QR code generator as its first gated service.</p>
           <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">JPA</span></div>
           <a class="project-link" href="https://github.com/magedalkishki/serviceshub">View on GitHub &rarr;</a>
         </article>
-        <article class="project">
+        <article class="project reveal" data-lang="C++">
           <h3>Tiny KV Cache</h3>
           <p>An in-memory key-value store built from scratch in C++17: an O(1) LRU eviction cache backed by a hash map and doubly linked list, plus optional per-key TTL expiration &mdash; the two mechanisms behind almost every real caching layer. Verified leak- and UB-free with AddressSanitizer, UBSan and Valgrind.</p>
           <div class="tags"><span class="tag">C++</span><span class="tag">Data Structures</span><span class="tag">CMake</span></div>
           <a class="project-link" href="https://github.com/magedalkishki/tiny-kv-cache">View on GitHub &rarr;</a>
         </article>
-        <article class="project">
+        <article class="project reveal" data-lang="PHP">
           <h3>Menu Cost Calculator</h3>
           <p>A PHP + SQLite web app that costs restaurant dishes from real ingredient prices and suggests a menu price for a target food-cost percentage &mdash; built to actually price the menu for the smoked-food restaurant I'm planning to open, not a toy demo.</p>
           <div class="tags"><span class="tag">PHP</span><span class="tag">SQLite</span><span class="tag">Composer</span></div>
           <a class="project-link" href="https://github.com/magedalkishki/menu-cost-calculator">View on GitHub &rarr;</a>
         </article>
-        <article class="project">
+        <article class="project reveal" data-lang="Python">
           <h3>Crypto Market Analyzer</h3>
           <p>A CLI tool that pulls live market data from CoinGecko's public API and computes real analysis on top of it &mdash; top gainers/losers, intraday volatility, liquidity relative to market cap, and market-cap concentration &mdash; with the analysis math tested independently of the live network call that feeds it.</p>
           <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">REST APIs</span></div>
           <a class="project-link" href="https://github.com/magedalkishki/crypto-market-analyzer">View on GitHub &rarr;</a>
         </article>
-        <article class="project">
+        <article class="project reveal" data-lang="C#">
           <h3>Bank Account Simulator</h3>
           <p>A C# console app simulating savings and checking accounts &mdash; deposits, withdrawals, transaction history, monthly interest accrual, and overdraft handling with a fee &mdash; built as a clean OOP exercise in inheritance and polymorphism, the kind of project that's a staple of junior C# interviews.</p>
           <div class="tags"><span class="tag">C#</span><span class="tag">OOP</span><span class="tag">.NET</span></div>
           <a class="project-link" href="https://github.com/magedalkishki/bank-account-simulator">View on GitHub &rarr;</a>
         </article>
-        <article class="project">
+        <article class="project reveal" data-lang="SQL Python">
           <h3>Esports Stats SQL</h3>
           <p>A normalized SQLite schema for a competitive-FPS league &mdash; teams, players, tournaments, matches, per-map results, and per-player stat lines &mdash; plus six analytical queries (win rates, K/D leaderboards, map strength, head-to-head) that actually require joins, GROUP BYs and a window function, not single-table SELECTs.</p>
           <div class="tags"><span class="tag">SQL</span><span class="tag">SQLite</span><span class="tag">Python</span></div>
           <a class="project-link" href="https://github.com/magedalkishki/esports-stats-sql">View on GitHub &rarr;</a>
         </article>
-        <article class="project">
+        <article class="project reveal" data-lang="C">
           <h3>Tourney Bracket Engine</h3>
           <p>A single-elimination tournament bracket engine in C: builds a bracket from any number of teams (auto-seeding byes when the count isn't a power of two), reports match results one at a time, and tracks everything through to a champion &mdash; hand-managed pointer ownership throughout, with no garbage collector to lean on.</p>
           <div class="tags"><span class="tag">C</span><span class="tag">Pointers</span><span class="tag">Valgrind</span></div>
           <a class="project-link" href="https://github.com/magedalkishki/tourney-bracket-engine">View on GitHub &rarr;</a>
         </article>
-        <article class="project">
+        <article class="project reveal" data-lang="Dart">
           <h3>Esports Elo Tracker</h3>
           <p>An Elo rating tracker in Dart: pure rating math (expected score, zero-sum rating updates), a stateful tracker with a shared match timeline and head-to-head lookups, real JSON persistence, and an interactive CLI &mdash; the same rating system behind chess and the ranked matchmaking I played under as a Valorant pro.</p>
           <div class="tags"><span class="tag">Dart</span><span class="tag">Elo Rating</span><span class="tag">JSON</span></div>
@@ -141,28 +191,70 @@
       </div>
     </section>
 
-    <section id="certifications" class="card">
-      <h2>Certifications</h2>
-      <ul>
-        <li>ALX Africa &mdash; Data Analytics (6-month programme, completed April 2026)</li>
-        <li>ALX Africa &mdash; AI Career Essentials (6-week programme, completed December 2025)</li>
-        <li>AWS Certified Cloud Practitioner &mdash; <em>in progress</em></li>
-        <li>Oracle Certified Professional, Java SE 21 Developer &mdash; <em>in progress</em></li>
-      </ul>
+    <section id="approach" class="card reveal">
+      <div class="section-head">
+        <span class="kicker">04 &mdash; How I build</span>
+        <h2>Approach</h2>
+      </div>
+      <div class="approach-grid">
+        <div class="approach-item">
+          <span class="approach-num">01</span>
+          <h4>Real tests, not just code that compiles</h4>
+          <p>Every project above ships with a test suite I wrote and actually ran &mdash; most against a hand-rolled test harness, since a lot of this was built in sandboxes with no access to the usual package registries.</p>
+        </div>
+        <div class="approach-item">
+          <span class="approach-num">02</span>
+          <h4>Model the real rule, not a toy version</h4>
+          <p>VCT's actual roster-eligibility policy, a restaurant's real food-cost formula, Elo's actual rating math &mdash; I'd rather get a real constraint right than build another generic CRUD demo.</p>
+        </div>
+        <div class="approach-item">
+          <span class="approach-num">03</span>
+          <h4>Verified from a clean clone</h4>
+          <p>Every repo above gets cloned fresh and rebuilt from scratch before I call it done &mdash; "works on my machine" isn't good enough.</p>
+        </div>
+        <div class="approach-item">
+          <span class="approach-num">04</span>
+          <h4>Honest about where I am</h4>
+          <p>Java and JavaScript are where I'm proficient. Everything else on this page is real, working, tested exposure &mdash; labeled as exactly that, not inflated.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <ul>
-        <li>Email: maged.alkishki@gmail.com</li>
-        <li>GitHub: <a href="https://github.com/magedalkishki">github.com/magedalkishki</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/maged-alaa-4647b0251">linkedin.com/in/maged-alaa-4647b0251</a></li>
+    <section id="certifications" class="card reveal">
+      <div class="section-head">
+        <span class="kicker">05 &mdash; Credentials</span>
+        <h2>Certifications</h2>
+      </div>
+      <ul class="cert-list">
+        <li><span class="cert-dot done"></span>ALX Africa &mdash; Data Analytics (6-month programme, completed April 2026)</li>
+        <li><span class="cert-dot done"></span>ALX Africa &mdash; AI Career Essentials (6-week programme, completed December 2025)</li>
+        <li><span class="cert-dot pending"></span>AWS Certified Cloud Practitioner &mdash; <em>in progress</em></li>
+        <li><span class="cert-dot pending"></span>Oracle Certified Professional, Java SE 21 Developer &mdash; <em>in progress</em></li>
       </ul>
     </section>
   </main>
 
+  <section id="contact" class="cta-band reveal">
+    <div class="cta-inner">
+      <span class="kicker">06 &mdash; Let's talk</span>
+      <h2>Open to junior roles &mdash; developer, QA, or technical support</h2>
+      <p>Based in Cairo, Egypt. Happy to talk about any of the projects above, or just to introduce myself.</p>
+      <div class="buttons centered">
+        <a class="btn primary" href="https://github.com/magedalkishki">View my GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/maged-alaa-4647b0251">LinkedIn</a>
+        <a class="btn" href="mailto:maged.alkishki@gmail.com" id="email-btn-2">Email me</a>
+      </div>
+      <ul class="contact-list">
+        <li>maged.alkishki@gmail.com</li>
+        <li><a href="https://github.com/magedalkishki">github.com/magedalkishki</a></li>
+        <li><a href="https://www.linkedin.com/in/maged-alaa-4647b0251">linkedin.com/in/maged-alaa-4647b0251</a></li>
+      </ul>
+    </div>
+  </section>
+
   <footer>
     <p>&copy; 2026 Maged Alaa Ahmed</p>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">&uarr; Top</button>
   </footer>
 
   <script src="script.js"></script>
