@@ -615,6 +615,11 @@ a {
   box-shadow: 0 0 0 3px rgba(255, 176, 32, 0.15);
 }
 
+.cert-dot.planned {
+  background: var(--accent-3);
+  box-shadow: 0 0 0 3px rgba(31, 182, 255, 0.15);
+}
+
 .cert-list em {
   color: var(--muted);
   font-style: normal;
