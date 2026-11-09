@@ -28,3 +28,28 @@ document.querySelectorAll(".project").forEach((card) => {
     card.style.transform = "";
   });
 });
+
+// 4. "Email me" also copies the address to the clipboard. The mailto: link
+// still fires normally if the browser has a default mail app configured,
+// but plenty of setups don't have one - this makes the button useful either
+// way instead of silently doing nothing.
+const emailBtn = document.getElementById("email-btn");
+const toast = document.getElementById("toast");
+let toastTimer = null;
+
+emailBtn.addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText("maged.alkishki@gmail.com");
+    showToast("Email copied to clipboard");
+  } catch {
+    // Clipboard API can be blocked (e.g. no secure context); the mailto:
+    // link still gets a chance to work, so just skip the toast silently.
+  }
+});
+
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.add("visible");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove("visible"), 2200);
+}
