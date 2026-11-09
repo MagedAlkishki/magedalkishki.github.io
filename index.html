@@ -38,7 +38,12 @@
         Spring Boot on the server, plain JavaScript on the frontend &mdash;
         and I gravitate toward projects with a real rule or constraint to
         model correctly, like VCT's actual roster-eligibility rules or a
-        library's due-date logic, rather than generic CRUD demos.
+        library's due-date logic, rather than generic CRUD demos. I've also
+        deliberately built and fully tested a real project in every other
+        language below &mdash; C, C++, C#, SQL, PHP, Python and Dart &mdash;
+        rather than just listing them, since I'd rather be honest about
+        where I'm proficient (Java, JavaScript) versus where I have real,
+        working exposure.
       </p>
     </section>
 
@@ -53,7 +58,7 @@
         <div class="tags"><span class="tag">Spring Boot</span><span class="tag">JPA / Hibernate</span><span class="tag">Node.js</span><span class="tag">Maven</span><span class="tag">JUnit</span><span class="tag">Git &amp; GitHub</span><span class="tag">REST APIs</span></div>
       </div>
       <div class="skills-group">
-        <h4>Exposure (coursework level)</h4>
+        <h4>Exposure &mdash; each backed by a real, tested project below</h4>
         <div class="tags"><span class="tag">Python</span><span class="tag">C</span><span class="tag">C++</span><span class="tag">C#</span><span class="tag">SQL</span><span class="tag">PHP</span><span class="tag">Dart</span></div>
       </div>
     </section>
@@ -90,6 +95,48 @@
           <p>A small subscription platform that gates access to hosted tools behind login plus an active subscription &mdash; the first step toward hosting several of my tools in one place. Ships with a QR code generator as its first gated service.</p>
           <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">JPA</span></div>
           <a class="project-link" href="https://github.com/magedalkishki/serviceshub">View on GitHub &rarr;</a>
+        </article>
+        <article class="project">
+          <h3>Tiny KV Cache</h3>
+          <p>An in-memory key-value store built from scratch in C++17: an O(1) LRU eviction cache backed by a hash map and doubly linked list, plus optional per-key TTL expiration &mdash; the two mechanisms behind almost every real caching layer. Verified leak- and UB-free with AddressSanitizer, UBSan and Valgrind.</p>
+          <div class="tags"><span class="tag">C++</span><span class="tag">Data Structures</span><span class="tag">CMake</span></div>
+          <a class="project-link" href="https://github.com/magedalkishki/tiny-kv-cache">View on GitHub &rarr;</a>
+        </article>
+        <article class="project">
+          <h3>Menu Cost Calculator</h3>
+          <p>A PHP + SQLite web app that costs restaurant dishes from real ingredient prices and suggests a menu price for a target food-cost percentage &mdash; built to actually price the menu for the smoked-food restaurant I'm planning to open, not a toy demo.</p>
+          <div class="tags"><span class="tag">PHP</span><span class="tag">SQLite</span><span class="tag">Composer</span></div>
+          <a class="project-link" href="https://github.com/magedalkishki/menu-cost-calculator">View on GitHub &rarr;</a>
+        </article>
+        <article class="project">
+          <h3>Crypto Market Analyzer</h3>
+          <p>A CLI tool that pulls live market data from CoinGecko's public API and computes real analysis on top of it &mdash; top gainers/losers, intraday volatility, liquidity relative to market cap, and market-cap concentration &mdash; with the analysis math tested independently of the live network call that feeds it.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">REST APIs</span></div>
+          <a class="project-link" href="https://github.com/magedalkishki/crypto-market-analyzer">View on GitHub &rarr;</a>
+        </article>
+        <article class="project">
+          <h3>Bank Account Simulator</h3>
+          <p>A C# console app simulating savings and checking accounts &mdash; deposits, withdrawals, transaction history, monthly interest accrual, and overdraft handling with a fee &mdash; built as a clean OOP exercise in inheritance and polymorphism, the kind of project that's a staple of junior C# interviews.</p>
+          <div class="tags"><span class="tag">C#</span><span class="tag">OOP</span><span class="tag">.NET</span></div>
+          <a class="project-link" href="https://github.com/magedalkishki/bank-account-simulator">View on GitHub &rarr;</a>
+        </article>
+        <article class="project">
+          <h3>Esports Stats SQL</h3>
+          <p>A normalized SQLite schema for a competitive-FPS league &mdash; teams, players, tournaments, matches, per-map results, and per-player stat lines &mdash; plus six analytical queries (win rates, K/D leaderboards, map strength, head-to-head) that actually require joins, GROUP BYs and a window function, not single-table SELECTs.</p>
+          <div class="tags"><span class="tag">SQL</span><span class="tag">SQLite</span><span class="tag">Python</span></div>
+          <a class="project-link" href="https://github.com/magedalkishki/esports-stats-sql">View on GitHub &rarr;</a>
+        </article>
+        <article class="project">
+          <h3>Tourney Bracket Engine</h3>
+          <p>A single-elimination tournament bracket engine in C: builds a bracket from any number of teams (auto-seeding byes when the count isn't a power of two), reports match results one at a time, and tracks everything through to a champion &mdash; hand-managed pointer ownership throughout, with no garbage collector to lean on.</p>
+          <div class="tags"><span class="tag">C</span><span class="tag">Pointers</span><span class="tag">Valgrind</span></div>
+          <a class="project-link" href="https://github.com/magedalkishki/tourney-bracket-engine">View on GitHub &rarr;</a>
+        </article>
+        <article class="project">
+          <h3>Esports Elo Tracker</h3>
+          <p>An Elo rating tracker in Dart: pure rating math (expected score, zero-sum rating updates), a stateful tracker with a shared match timeline and head-to-head lookups, real JSON persistence, and an interactive CLI &mdash; the same rating system behind chess and the ranked matchmaking I played under as a Valorant pro.</p>
+          <div class="tags"><span class="tag">Dart</span><span class="tag">Elo Rating</span><span class="tag">JSON</span></div>
+          <a class="project-link" href="https://github.com/magedalkishki/esports-elo-tracker">View on GitHub &rarr;</a>
         </article>
       </div>
     </section>
